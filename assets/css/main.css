@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Karma:500,500i,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
 
-html,
 body {
-	background-color: #EDAD4A !important;
 	font-family: 'Roboto', 'Karma', sans-serif, arial, serif !important;
 	color: #FFE9C8 !important;
+}
+a {
+
 }
 a:hover {
 	text-decoration: none !important;
@@ -26,12 +27,6 @@ img {
 	font-size: 1.8em !important;
 	font-weight: 500 !important;
 }
-.minor {
-	color: #FFE9C8;
-	text-align: center;
-	font-size: 1em !important;
-	font-weight: 300 !important;
-}
 .break { 
     background: #FFDDAA;
     margin: 0 auto;
@@ -48,21 +43,21 @@ img {
 	border-top: 1px solid rgba(255, 252, 249, 0.5);
 }
 .footer-wrapper {
-  margin-top: 20px;  
-  margin-bottom: -10px;
-  text-align: center;
-  font-size: 14px;
-  color: #FFE9C8;
+	margin-top: 20px;  
+	margin-bottom: -10px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFE9C8;
 }
 .footer-wrapper a {
-  color:#FFE9C8;
-  font-size: 25px;
+	color:#FFE9C8;
+ 	font-size: 25px;
 }
 .social-icons {
-  margin: 0.5em 0 2em;
+	margin: 0.5em 0 2em;
 }
 .social-icons a {
-  padding: 4px 8px;
+	padding: 4px 8px;
 }
 @keyframes heartbeat {
 	0% {
@@ -119,6 +114,9 @@ img {
 }
 .btn_style:nth-child(2) {
 	border-radius: 0px 10px 10px 0px;
+}
+#final_text {
+	text-align: center;
 }
 
 @media screen and (min-width: 300px) and (max-width: 399px) {

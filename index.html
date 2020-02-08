@@ -28,24 +28,25 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css"/>
 
-  <body>
+  <body style="background-color: #EDAD4A !important;">
 
 	<div class="container">
 
 	  	<div class="heading">
 	  		<div class="col-md-12 col-xs-12">
-	  			<a href="https://sidaartha.github.io/ShouldIBuyThis" class="major">Should I Buy This?</a>
+	  			<a id="major" href="https://sidaartha.github.io/ShouldIBuyThis" class="major">Should I Buy This?</a>
 	  		</div>
 	  	</div>
 	  	<div class="col-md-12 col-xs-12">
-	  		<div class="break"></div>
+	  		<div id="break" class="break"></div>
 
-	  		<div class="question">
-	  			<img src="assets/img/1.png">
+	  		<div id="question" class="question">
+	  			<img id="image" src="assets/img/1.png">
 	  		</div>
-	  		<div class="btn_group text-center">
-  				<button type="button" class="btn btn-success btn_style">Yes</button>
-				<button type="button" class="btn btn-danger btn_style">No</button>
+	  		<div id="final_text"></div>
+	  		<div id="btns" class="btn_group text-center">
+  				<button id="btn1" type="button" class="btn btn-success btn_style" onclick = "nextQuestion(1,1)">Yes</button>
+				<button id="btn0" type="button" class="btn btn-danger btn_style" onclick = "nextQuestion(0,1)">No</button>
 			</div>
 
 	  	</div>
@@ -53,8 +54,8 @@
 	</div>
 
 
-	<div class="footer" style="margin-bottom:0px">
-		<div class="footer-wrapper">
+	<div id="footer" class="footer" style="margin-bottom:0px">
+		<div id="footer-wrapper" class="footer-wrapper">
 			<span>Made with <i class="fa fa-heart heart" aria-hidden="true"></i> by Sidaartha.</span>
 			<div class="social-icons">
 			  <a href="https://github.com/sidaartha" target="_blank"><i class="fa fa-github zoom"></i></a>
