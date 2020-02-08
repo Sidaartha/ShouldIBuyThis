@@ -120,3 +120,24 @@ img {
 .btn_style:nth-child(2) {
 	border-radius: 0px 10px 10px 0px;
 }
+
+@media screen and (min-width: 300px) and (max-width: 399px) {
+	.question {
+		margin-top: 40px;
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 799px) {
+	.question {
+		margin-top: 70px;
+		margin-bottom: 50px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.question {
+		margin-top: 100px;
+		margin-bottom: 60px;
+	}
+}
