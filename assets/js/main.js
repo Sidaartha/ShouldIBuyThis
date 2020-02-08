@@ -14,6 +14,7 @@ function dangerStyle() {
 	style = document.createElement('style');
 	style.appendChild(document.createTextNode(css));
 	document.getElementsByTagName('head')[0].appendChild(style);
+	document.getElementsByClassName("heart")[0].style.color = "#600B00";
 }
 
 function nextQuestion(bool, qus) {
