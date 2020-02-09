@@ -5,9 +5,6 @@ body {
 	font-family: 'Roboto', 'Karma', sans-serif, arial, serif !important;
 	color: #FFE9C8 !important;
 }
-a {
-
-}
 a:hover {
 	text-decoration: none !important;
 	color: #3E301C !important;
@@ -41,10 +38,11 @@ img {
 	margin-bottom: 0px;
 	margin-top: 10%;
 	border-top: 1px solid rgba(255, 252, 249, 0.5);
+	line-height: 25px;
 }
 .footer-wrapper {
 	margin-top: 20px;  
-	margin-bottom: -10px;
+	margin-bottom: -20px;
 	text-align: center;
 	font-size: 14px;
 	color: #FFE9C8;
@@ -117,6 +115,13 @@ img {
 }
 #final_text {
 	text-align: center;
+}
+#btn_back {
+	margin-top: 20px;
+	visibility: hidden;
+}
+#btnb {
+	color: #FFE9C8 !important;
 }
 
 @media screen and (min-width: 300px) and (max-width: 399px) {
