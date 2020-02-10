@@ -1,7 +1,22 @@
 var image =  document.getElementById("image");
+var image = document.getElementById("question").innerHTML;
 var btn1 =  document.getElementById("btn1");
 var btn0 =  document.getElementById("btn0");
 var btnb =  document.getElementById("btnb");
+var imgNameArray = ['1','2','3','4','5','6','7','8','9','F1','F2','F3','F4','F5','F6']
+
+var imgArray = new Array();
+for (i = 0; i < imgNameArray.length; i++) {
+	imgArray[i] = new Image();
+	imgArray[i].id = 'image'
+	imgArray[i].src = 'assets/img/'+imgNameArray[i]+'.png';
+}
+
+function imageAdd(img) {
+	document.getElementById("question").innerHTML="";
+	document.getElementById("question").appendChild(imgArray[img]);
+}
+imageAdd(0)
 
 function dangerStyle() {
 	document.body.style.backgroundColor = "#C53131";
@@ -23,21 +38,20 @@ function dangerStyle() {
 }
 
 function nextQuestion(bool, qus) {
-	console.log(bool, qus)
 	if (qus == 0) {
-		image.src = "assets/img/1.png";
+		image.src = imgArray[1];
 		btn1.setAttribute("onClick", "nextQuestion(1,1);");
 		btn0.setAttribute("onClick", "nextQuestion(0,1);");
 		btnb.style.visibility = "hidden";
 	}else if (qus == 1) {
 		btnb.style.visibility = "visible";
 		if (bool == 1) {
-			image.src = "assets/img/2.png";
+			imageAdd(1);
 			btn1.setAttribute("onClick", "nextQuestion(1,2);");
 			btn0.setAttribute("onClick", "nextQuestion(0,2);");
 			btnb.setAttribute("onClick", "nextQuestion(0,0);");
 		} else if (bool == 0) {
-			image.src = "assets/img/3.png";
+			imageAdd(2);
 			btn1.setAttribute("onClick", "nextQuestion(1,3);");
 			btn0.setAttribute("onClick", "nextQuestion(0,3);");
 			btnb.setAttribute("onClick", "nextQuestion(0,0);");
@@ -45,22 +59,22 @@ function nextQuestion(bool, qus) {
 	} else if (qus == 2) {
 		btnb.style.visibility = "visible";
 		if (bool == 1) {
-			image.src = "assets/img/4.png";
+			imageAdd(3);
 			btn1.setAttribute("onClick", "nextQuestion(1,4);");
 			btn0.setAttribute("onClick", "nextQuestion(0,4);");
 			btnb.setAttribute("onClick", "nextQuestion(1,1);");
 		} else if (bool == 0) {
-			image.src = "assets/img/F1.png";
+			imageAdd(9);
 			dangerStyle()
 			document.getElementById("final_text").innerHTML='<span style="color: #EDAEAE;">You don’t truly need this item.</span>';
 		}
 	} else if (qus == 3) {
 		btnb.style.visibility = "visible";
 		if (bool == 1) {
-			image.src = "assets/img/F2.png";
+			imageAdd(10);
 			dangerStyle()
 		} else if (bool == 0) {
-			image.src = "assets/img/5.png";
+			imageAdd(4);
 			btn1.setAttribute("onClick", "nextQuestion(1,5);");
 			btn0.setAttribute("onClick", "nextQuestion(0,5);");
 			btnb.setAttribute("onClick", "nextQuestion(0,1);");
@@ -68,12 +82,12 @@ function nextQuestion(bool, qus) {
 	} else if (qus == 4) {
 		btnb.style.visibility = "visible";
 		if (bool == 1) {
-			image.src = "assets/img/6.png";
+			imageAdd(5);
 			btn1.setAttribute("onClick", "nextQuestion(1,6);");
 			btn0.setAttribute("onClick", "nextQuestion(0,6);");
 			btnb.setAttribute("onClick", "nextQuestion(1,2);");
 		} else if (bool == 0) {
-			image.src = "assets/img/3.png";
+			imageAdd(2);
 			btn1.setAttribute("onClick", "nextQuestion(1,3);");
 			btn0.setAttribute("onClick", "nextQuestion(0,3);");
 			btnb.setAttribute("onClick", "nextQuestion(1,2);");
@@ -81,21 +95,21 @@ function nextQuestion(bool, qus) {
 	} else if (qus == 5) {
 		btnb.style.visibility = "visible";
 		if (bool == 1) {
-			image.src = "assets/img/F3.png";
+			imageAdd(11);
 			dangerStyle()
 		} else if (bool == 0) {
-			image.src = "assets/img/F4.png";
+			imageAdd(12);
 			dangerStyle()
 			document.getElementById("final_text").innerHTML='<span style="color: #EDAEAE;">If it’s something you really want.</span>';
 		}
 	} else if (qus == 6) {
 		btnb.style.visibility = "visible";
 		if (bool == 1) {
-			image.src = "assets/img/F1.png";
+			imageAdd(9);
 			dangerStyle()
 			document.getElementById("final_text").innerHTML='<span style="color: #EDAEAE;">You don’t truly need this item.</span>';
 		} else if (bool == 0) {
-			image.src = "assets/img/9.png";
+			imageAdd(8);
 			btn1.setAttribute("onClick", "nextQuestion(1,9);");
 			btn0.setAttribute("onClick", "nextQuestion(0,9);");
 			btnb.setAttribute("onClick", "nextQuestion(1,4);");
@@ -103,18 +117,18 @@ function nextQuestion(bool, qus) {
 	} else if (qus == 7) {
 		btnb.style.visibility = "visible";
 		if (bool == 1) {
-			image.src = "assets/img/8.png";
+			imageAdd(7);
 			btn1.setAttribute("onClick", "nextQuestion(1,8);");
 			btn0.setAttribute("onClick", "nextQuestion(0,8);");
 			btnb.setAttribute("onClick", "nextQuestion(0,9);");
 		} else if (bool == 0) {
-			image.src = "assets/img/F5.png";
+			imageAdd(13);
 			document.getElementById("final_text").innerHTML='<span style="color: #EDAEAE;">So you know you are getting a good deal.</span>';
 			dangerStyle()
 		}
 	} else if (qus == 8) {
 		if (bool == 1) {
-			image.src = "assets/img/F6.png";
+			imageAdd(14);
 			document.body.style.backgroundColor = "#79BE87";
 			document.getElementById("major").style.color = "#B5FFC2";
 			document.getElementById("break").style.backgroundColor = "#B5FFC2";
@@ -131,18 +145,18 @@ function nextQuestion(bool, qus) {
 			btn0.style.visibility = "hidden";
 			btnb.style.visibility = "hidden";
 		} else if (bool == 0) {
-			image.src = "assets/img/F1.png";
+			imageAdd(9);
 			dangerStyle()
 			document.getElementById("final_text").innerHTML='<span style="color: #EDAEAE;">Congrats! You prevented an impulse purchase and saved money!</span>';
 		}
 	} else if (qus == 9) {
 		btnb.style.visibility = "visible";
 		if (bool == 1) {
-			image.src = "assets/img/F4.png";
+			imageAdd(12);
 			document.getElementById("final_text").innerHTML='<span style="color: #EDAEAE;">If it’s something you really want.</span>';
 			dangerStyle()
 		} else if (bool == 0) {
-			image.src = "assets/img/7.png";
+			imageAdd(6);
 			btn1.setAttribute("onClick", "nextQuestion(1,7);");
 			btn0.setAttribute("onClick", "nextQuestion(0,7);");
 			btnb.setAttribute("onClick", "nextQuestion(0,6);");
