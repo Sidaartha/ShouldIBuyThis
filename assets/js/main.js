@@ -3,6 +3,7 @@ var image = document.getElementById("question").innerHTML;
 var btn1 =  document.getElementById("btn1");
 var btn0 =  document.getElementById("btn0");
 var btnb =  document.getElementById("btnb");
+var cont =  document.getElementById("initial-content");
 var imgNameArray = ['1','2','3','4','5','6','7','8','9','F1','F2','F3','F4','F5','F6']
 
 var imgArray = new Array();
@@ -35,6 +36,7 @@ function dangerStyle() {
 	btn1.style.visibility = "hidden";
 	btn0.style.visibility = "hidden";
 	btnb.style.visibility = "hidden";
+	cont.style.visibility = "hidden";
 }
 
 function nextQuestion(bool, qus) {
@@ -43,6 +45,7 @@ function nextQuestion(bool, qus) {
 		btn1.setAttribute("onClick", "nextQuestion(1,1);");
 		btn0.setAttribute("onClick", "nextQuestion(0,1);");
 		btnb.style.visibility = "hidden";
+		cont.style.visibility = "visible";
 	}else if (qus == 1) {
 		btnb.style.visibility = "visible";
 		if (bool == 1) {
@@ -50,11 +53,13 @@ function nextQuestion(bool, qus) {
 			btn1.setAttribute("onClick", "nextQuestion(1,2);");
 			btn0.setAttribute("onClick", "nextQuestion(0,2);");
 			btnb.setAttribute("onClick", "nextQuestion(0,0);");
+			cont.style.visibility = "hidden";
 		} else if (bool == 0) {
 			imageAdd(2);
 			btn1.setAttribute("onClick", "nextQuestion(1,3);");
 			btn0.setAttribute("onClick", "nextQuestion(0,3);");
 			btnb.setAttribute("onClick", "nextQuestion(0,0);");
+			cont.style.visibility = "hidden";
 		}
 	} else if (qus == 2) {
 		btnb.style.visibility = "visible";
@@ -63,6 +68,7 @@ function nextQuestion(bool, qus) {
 			btn1.setAttribute("onClick", "nextQuestion(1,4);");
 			btn0.setAttribute("onClick", "nextQuestion(0,4);");
 			btnb.setAttribute("onClick", "nextQuestion(1,1);");
+			cont.style.visibility = "hidden";
 		} else if (bool == 0) {
 			imageAdd(9);
 			dangerStyle()
@@ -78,6 +84,7 @@ function nextQuestion(bool, qus) {
 			btn1.setAttribute("onClick", "nextQuestion(1,5);");
 			btn0.setAttribute("onClick", "nextQuestion(0,5);");
 			btnb.setAttribute("onClick", "nextQuestion(0,1);");
+			cont.style.visibility = "hidden";
 		}
 	} else if (qus == 4) {
 		btnb.style.visibility = "visible";
@@ -86,11 +93,13 @@ function nextQuestion(bool, qus) {
 			btn1.setAttribute("onClick", "nextQuestion(1,6);");
 			btn0.setAttribute("onClick", "nextQuestion(0,6);");
 			btnb.setAttribute("onClick", "nextQuestion(1,2);");
+			cont.style.visibility = "hidden";
 		} else if (bool == 0) {
 			imageAdd(2);
 			btn1.setAttribute("onClick", "nextQuestion(1,3);");
 			btn0.setAttribute("onClick", "nextQuestion(0,3);");
 			btnb.setAttribute("onClick", "nextQuestion(1,2);");
+			cont.style.visibility = "hidden";
 		}
 	} else if (qus == 5) {
 		btnb.style.visibility = "visible";
@@ -113,6 +122,7 @@ function nextQuestion(bool, qus) {
 			btn1.setAttribute("onClick", "nextQuestion(1,9);");
 			btn0.setAttribute("onClick", "nextQuestion(0,9);");
 			btnb.setAttribute("onClick", "nextQuestion(1,4);");
+			cont.style.visibility = "hidden";
 		}
 	} else if (qus == 7) {
 		btnb.style.visibility = "visible";
@@ -121,6 +131,7 @@ function nextQuestion(bool, qus) {
 			btn1.setAttribute("onClick", "nextQuestion(1,8);");
 			btn0.setAttribute("onClick", "nextQuestion(0,8);");
 			btnb.setAttribute("onClick", "nextQuestion(0,9);");
+			cont.style.visibility = "hidden";
 		} else if (bool == 0) {
 			imageAdd(13);
 			document.getElementById("final_text").innerHTML='<span style="color: #EDAEAE;">So you know you are getting a good deal.</span>';
@@ -144,6 +155,7 @@ function nextQuestion(bool, qus) {
 			btn1.style.visibility = "hidden";
 			btn0.style.visibility = "hidden";
 			btnb.style.visibility = "hidden";
+			cont.style.visibility = "hidden";
 		} else if (bool == 0) {
 			imageAdd(9);
 			dangerStyle()
@@ -160,6 +172,7 @@ function nextQuestion(bool, qus) {
 			btn1.setAttribute("onClick", "nextQuestion(1,7);");
 			btn0.setAttribute("onClick", "nextQuestion(0,7);");
 			btnb.setAttribute("onClick", "nextQuestion(0,6);");
+			cont.style.visibility = "hidden";
 		}
 	}
 }
